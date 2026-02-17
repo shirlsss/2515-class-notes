@@ -1,6 +1,6 @@
 class BankAccount:
-    def __init__(self):
-        self.number=11
-        self.holder="Shirley"
-        self.balance=200
+    def __init__(self, holder, number, balance):
+        self.number=number
+        self.holder=holder
+        self.balance=balance
         print("A new bank account has been created")
