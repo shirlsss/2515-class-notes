@@ -142,16 +142,7 @@ def test_get_average_word_length(essay):
     # Hint: Words are ["The", "cat", "sat", "The", "dog", "ran", "The", "bird", "flew"]
     # Average = (3+3+3+3+3+3+3+4+4) / 9 = 29/9 ≈ 3.22
     result = get_average_word_length(essay)
-    working = []
-    words = remove_punctuation(essay)
-    for word in words.split(" "):
-        working.append(word)
-    counter = 0
-    divide = 0
-    for word in working:
-        counter += len(word)
-        divide += 1
-    assert result == counter / divide
+    assert result == 29/9
 
 def test_remove_punctuation(simple_sentence, cleaned_text):
     # TODO: Test that remove_punctuation(simple_sentence) returns cleaned_text
