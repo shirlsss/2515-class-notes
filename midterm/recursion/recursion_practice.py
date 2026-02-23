@@ -18,13 +18,9 @@ def sum_of_list(nums: list) -> int:
 # Example: !4 = 4 x 3 x 2 x 1 = 24
 
 def factorial_summer(num: int) -> int:
-    count = num
-    if num == 0:
+    if num <= 1:
         return 1
-    elif num == 1:
-        return count
-    else:
-        count += count * factorial_summer(num - 1)
+    return num * factorial_summer(num - 1)
 
 
     

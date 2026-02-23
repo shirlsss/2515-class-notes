@@ -23,11 +23,13 @@ print_names(name="Shirley")
 # Add a bonus from **kwargs (default to 0)
 
 def calculate(*args, **kwargs):
-    sums = sum(*args)
-    pass
+    sums = sum(args)
+    multiplier = kwargs.get("multiplier",1)
+    bonus = kwargs.get("bonus",0)
+    return sums * multiplier + bonus
 
 # # Test cases:
-# print(calculate(1, 2, 3))                    # Should return 6
-# print(calculate(1, 2, 3, multiplier=2))      # Should return 12
-# print(calculate(1, 2, 3, bonus=10))          # Should return 16
-# print(calculate(1, 2, 3, multiplier=2, bonus=5))  # Should return 17
+print(calculate(1, 2, 3))                    # Should return 6
+print(calculate(1, 2, 3, multiplier=2))      # Should return 12
+print(calculate(1, 2, 3, bonus=10))          # Should return 16
+print(calculate(1, 2, 3, multiplier=2, bonus=5))  # Should return 17
